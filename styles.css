@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+    overflow: hidden;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+canvas{
+    shape-rendering: crispEdges;
+}
+
+#bucket-btn{
+    position: absolute;
+}
