@@ -1,0 +1,5 @@
+const cAppState = {
+    active: false,
+
+
+}

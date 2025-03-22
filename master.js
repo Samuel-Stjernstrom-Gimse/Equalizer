@@ -42,8 +42,6 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-
-
 // Create square particles
 const particles = Array.from({ length: appState.particleCount }, () => new Particle(appState.particleSize, ctx, canvas));
 
