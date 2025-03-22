@@ -9,12 +9,10 @@ body{
     padding: 0;
 }
 
-
-
 canvas{
     shape-rendering: crispEdges;
 }
 
-#bucket-btn{
+#menu{
     position: absolute;
 }
