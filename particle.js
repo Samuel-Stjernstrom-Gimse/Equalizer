@@ -10,11 +10,11 @@ export default class Particle {
         this.size = size;
         this.ctx = ctx;
         this.canvas = canvas;
-        this.mass = Math.random() * .12 + 1; // Random mass between 1 and 3
+        this.mass = Math.random() * .12 + 1;
         const { x, y } = randomPosition(canvas);
         this.x = x;
         this.y = y;
-        this.velocityX = (Math.random() - 0.5) * 2 / this.mass; // Lighter particles move more
+        this.velocityX = (Math.random() - 0.5) * 2 / this.mass;
         this.velocityY = 0;
     }
 
@@ -37,7 +37,7 @@ export default class Particle {
 
                 if (isBarGrowing) {
                     this.velocityY = -Math.abs(this.velocityY) - (height - prevHeight) * (0.27 / this.mass);
-                    this.velocityX += (Math.random() - 0.5) * (2 / this.mass); // Lighter particles react more
+                    this.velocityX += (Math.random() - 0.5) * (2 / this.mass);
                     wasPushed = true;
                 }
             }
@@ -49,9 +49,9 @@ export default class Particle {
             this.velocityY = Math.max(this.velocityY, 0);
         }
 
-        this.velocityY += 0.65 * Math.random() * 1.14;
+        this.velocityY += .6 * Math.random() * 1.14; // G
         this.velocityX *= 0.92;
-        this.velocityY *= 0.92 / this.mass; // Heavier particles slow down differently
+        this.velocityY *= 0.92 / this.mass;
 
         this.x += this.velocityX;
         this.y += this.velocityY;
